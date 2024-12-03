@@ -1,7 +1,7 @@
 (function () {
-  const scripts = document.getElementsByTagName("script");
   let sentryFound = false;
 
+  const scripts = document.getElementsByTagName("script");
   for (let script of scripts) {
     if (
       script.src.includes("sentry") ||
@@ -12,6 +12,7 @@
     }
   }
 
-  // Notify the background script about the result
-  chrome.runtime.sendMessage({ sentryPresent: sentryFound });
+  chrome.runtime.sendMessage({
+    sentryPresent: sentryFound,
+  });
 })();

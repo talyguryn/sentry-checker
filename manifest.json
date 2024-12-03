@@ -5,7 +5,6 @@
   "description": "Checks if a webpage has loaded Sentry error catcher.",
   "permissions": ["scripting", "activeTab", "notifications"],
   "action": {
-    "default_popup": "popup.html",
     "default_icon": {
       "128": "icon_gray.png"
     }
